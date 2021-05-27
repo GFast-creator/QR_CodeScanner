@@ -1,0 +1,81 @@
+com/example/qrcodescanner/StartActivityActivity.java
+ com.example.qrcodescanner.StartActivityActivity
+ com.example.qrcodescanner.StartActivityActivity$1
+ com.example.qrcodescanner.StartActivityActivity$2
+com/example/qrcodescanner/RecyclerItemClickListener.java
+ com.example.qrcodescanner.RecyclerItemClickListener
+ com.example.qrcodescanner.RecyclerItemClickListener$1
+ com.example.qrcodescanner.RecyclerItemClickListener$OnItemClickListener
+com/example/qrcodescanner/SimpleClasses/Vibro.java
+ com.example.qrcodescanner.SimpleClasses.Vibro
+com/example/qrcodescanner/SimpleClasses/QRCodeItem.java
+ com.example.qrcodescanner.SimpleClasses.QRCodeItem
+com/example/qrcodescanner/IconPicker.java
+ com.example.qrcodescanner.IconPicker
+ com.example.qrcodescanner.IconPicker$1
+ com.example.qrcodescanner.IconPicker$2
+com/example/qrcodescanner/SimpleClasses/DBSavePic.java
+ com.example.qrcodescanner.SimpleClasses.DBSavePic
+com/example/qrcodescanner/Adapters/IconsAdapter.java
+ com.example.qrcodescanner.Adapters.IconsAdapter
+ com.example.qrcodescanner.Adapters.IconsAdapter$ViewHolder
+com/example/qrcodescanner/BuildConfig.java
+ com.example.qrcodescanner.BuildConfig
+com/example/qrcodescanner/Adapters/QRCodesViewAdapter.java
+ com.example.qrcodescanner.Adapters.QRCodesViewAdapter
+ com.example.qrcodescanner.Adapters.QRCodesViewAdapter$ViewHolder
+com/example/qrcodescanner/SimpleClasses/DBHelper.java
+ com.example.qrcodescanner.SimpleClasses.DBHelper
+com/example/qrcodescanner/SimpleClasses/DrawPoint.java
+ com.example.qrcodescanner.SimpleClasses.DrawPoint
+com/example/qrcodescanner/MyService.java
+ com.example.qrcodescanner.MyService
+com/example/qrcodescanner/NewAppWidget.java
+ com.example.qrcodescanner.NewAppWidget
+com/example/qrcodescanner/FragmentsCode/QRCodeCreateFragment.java
+ com.example.qrcodescanner.FragmentsCode.QRCodeCreateFragment
+ com.example.qrcodescanner.FragmentsCode.QRCodeCreateFragment$1
+ com.example.qrcodescanner.FragmentsCode.QRCodeCreateFragment$2
+ com.example.qrcodescanner.FragmentsCode.QRCodeCreateFragment$3
+ com.example.qrcodescanner.FragmentsCode.QRCodeCreateFragment$4
+ com.example.qrcodescanner.FragmentsCode.QRCodeCreateFragment$5
+ com.example.qrcodescanner.FragmentsCode.QRCodeCreateFragment$6
+ com.example.qrcodescanner.FragmentsCode.QRCodeCreateFragment$7
+com/example/qrcodescanner/PicViewActivity.java
+ com.example.qrcodescanner.PicViewActivity
+ com.example.qrcodescanner.PicViewActivity$1
+ com.example.qrcodescanner.PicViewActivity$2
+ com.example.qrcodescanner.PicViewActivity$3
+ com.example.qrcodescanner.PicViewActivity$4
+ com.example.qrcodescanner.PicViewActivity$5
+ com.example.qrcodescanner.PicViewActivity$5$1
+ com.example.qrcodescanner.PicViewActivity$6
+ com.example.qrcodescanner.PicViewActivity$7
+ com.example.qrcodescanner.PicViewActivity$8
+com/example/qrcodescanner/FragmentsCode/QRScanner.java
+ com.example.qrcodescanner.FragmentsCode.QRScanner
+ com.example.qrcodescanner.FragmentsCode.QRScanner$1
+ com.example.qrcodescanner.FragmentsCode.QRScanner$1$1
+ com.example.qrcodescanner.FragmentsCode.QRScanner$1$2
+ com.example.qrcodescanner.FragmentsCode.QRScanner$2
+ com.example.qrcodescanner.FragmentsCode.QRScanner$3
+ com.example.qrcodescanner.FragmentsCode.QRScanner$4
+ com.example.qrcodescanner.FragmentsCode.QRScanner$4$1
+ com.example.qrcodescanner.FragmentsCode.QRScanner$4$2
+ com.example.qrcodescanner.FragmentsCode.QRScanner$5
+ com.example.qrcodescanner.FragmentsCode.QRScanner$5$1
+com/example/qrcodescanner/FragmentsCode/SavedPicFragment.java
+ com.example.qrcodescanner.FragmentsCode.SavedPicFragment
+ com.example.qrcodescanner.FragmentsCode.SavedPicFragment$1
+ com.example.qrcodescanner.FragmentsCode.SavedPicFragment$2
+ com.example.qrcodescanner.FragmentsCode.SavedPicFragment$3
+com/example/qrcodescanner/MainActivity.java
+ com.example.qrcodescanner.MainActivity
+ com.example.qrcodescanner.MainActivity$1
+ com.example.qrcodescanner.MainActivity$2
+ com.example.qrcodescanner.MainActivity$3
+com/example/qrcodescanner/FragmentsCode/SavedPicGeneratedFragment.java
+ com.example.qrcodescanner.FragmentsCode.SavedPicGeneratedFragment
+ com.example.qrcodescanner.FragmentsCode.SavedPicGeneratedFragment$1
+ com.example.qrcodescanner.FragmentsCode.SavedPicGeneratedFragment$2
+ com.example.qrcodescanner.FragmentsCode.SavedPicGeneratedFragment$3

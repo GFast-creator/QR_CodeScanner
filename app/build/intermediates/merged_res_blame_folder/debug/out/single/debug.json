@@ -1,0 +1,254 @@
+[
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_forsan_foreground.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_forsan_foreground.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_highlight_on_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_baseline_highlight_on_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_forsan_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_forsan_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_fragment_qrcode_create.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout-land\\fragment_qrcode_create.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_forsan_foreground.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_forsan_foreground.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_forsan_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_forsan_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_example_appwidget_preview.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable-nodpi\\example_appwidget_preview.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_qr_code_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_baseline_qr_code_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_delete_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_baseline_delete_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_qrcode_create.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\fragment_qrcode_create.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_icon_recycler_view.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\icon_recycler_view.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_highlight_off_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_outline_highlight_off_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_twotone_camera_touched_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_twotone_camera_touched_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_savedpic_generated.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\fragment_savedpic_generated.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_forsan_foreground.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_forsan_foreground.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_forsan.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_forsan.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pic_view.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\activity_pic_view.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_photo_filter_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_baseline_photo_filter_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_qr_code_scanner_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_baseline_qr_code_scanner_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_forsan_foreground.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_forsan_foreground.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_no_history_scan.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable-nodpi\\no_history_scan.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_forsan_foreground.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_forsan_foreground.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_forsan_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_forsan_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_layout_bg.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\layout_bg.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\menu_pic_info_menu.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\menu\\pic_info_menu.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_forsan.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_forsan.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_start_activity.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\start_activity.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_photo_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_baseline_photo_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_no_history_generator.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable-nodpi\\no_history_generator.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_forsan_round.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_forsan_round.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_forsan_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_forsan_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_forsan.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_forsan.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\xml_new_app_widget_info.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\xml\\new_app_widget_info.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_forsan.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_forsan.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_twotone_crop_free_red_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_twotone_crop_free_red_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_forsan.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_forsan.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_icon_picker.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\activity_icon_picker.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_twotone_camera_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_twotone_camera_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_twotone_crop_free_blue_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_twotone_crop_free_blue_24.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_forsan_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_forsan_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_saved_pic.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\fragment_saved_pic.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_recycler_view.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\item_recycler_view.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_new_app_widget.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\new_app_widget.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_forsan.png.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_forsan.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_qrscanner.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\fragment_qrscanner.xml"
+    }
+]
