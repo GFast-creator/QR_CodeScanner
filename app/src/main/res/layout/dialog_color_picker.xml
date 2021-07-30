@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.madrapps.pikolo.HSLColorPicker
+        android:id="@+id/HSLColorPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="293dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.madrapps.pikolo.HSLColorPicker>
+
+    <Button
+        android:id="@+id/pickedColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Цвет"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HSLColorPicker" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите\nцвет"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/HSLColorPicker"
+        app:layout_constraintEnd_toEndOf="@+id/HSLColorPicker"
+        app:layout_constraintStart_toStartOf="@+id/HSLColorPicker"
+        app:layout_constraintTop_toTopOf="@+id/HSLColorPicker" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_scanner_settings.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\activity_scanner_settings.xml"
+    },
+    {
         "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -20,12 +24,12 @@
         "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_fragment_qrcode_create.xml.flat",
-        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout-land\\fragment_qrcode_create.xml"
-    },
-    {
         "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_forsan_foreground.png.flat",
         "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_forsan_foreground.png"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_fragment_qrcode_create.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout-land\\fragment_qrcode_create.xml"
     },
     {
         "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_forsan_round.png.flat",
@@ -38,6 +42,10 @@
     {
         "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header.xml.flat",
         "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_settings_24.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_baseline_settings_24.xml"
     },
     {
         "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_example_appwidget_preview.png.flat",
@@ -152,6 +160,10 @@
         "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\start_activity.xml"
     },
     {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_result_picker.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\activity_result_picker.xml"
+    },
+    {
         "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_photo_24.xml.flat",
         "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\drawable\\ic_baseline_photo_24.xml"
     },
@@ -230,6 +242,10 @@
     {
         "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
         "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_color_picker.xml.flat",
+        "source": "C:\\#Project\\MyApplication9_16\\app\\src\\main\\res\\layout\\dialog_color_picker.xml"
     },
     {
         "merged": "C:\\#Project\\MyApplication9_16\\app\\build\\intermediates\\res\\merged\\debug\\layout_new_app_widget.xml.flat",

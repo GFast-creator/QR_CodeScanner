@@ -2,9 +2,9 @@ package com.example.qrcodescanner.FragmentsCode;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -16,6 +16,7 @@ import android.graphics.PixelFormat;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.hardware.Camera;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -33,14 +34,13 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.solver.state.Dimension;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.qrcodescanner.PicViewActivity;
 import com.example.qrcodescanner.R;
-import com.example.qrcodescanner.SimpleClasses.DrawPoint;
+import com.example.qrcodescanner.ResultPicker;
+import com.example.qrcodescanner.ScannerSettingsActivity;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
@@ -90,11 +90,10 @@ public class QRScanner extends Fragment {
         qrCodeType.put(Barcode.UPC_E,"UPC_E");
     }
 
+    private int firstColor;
+    private int secondColor;
     static View buttonView;
-    private static final DrawPoint p1 = new DrawPoint(0, 0);
-    private static final DrawPoint p2 = new DrawPoint(0, 0);
-    private static final DrawPoint p3 = new DrawPoint(0, 0);
-    private static final DrawPoint p4 = new DrawPoint(0, 0);
+    public Uri imageUri;
     SparseArray<Barcode> qrCodes;
     ImageView buttonTakePic;
     static public SurfaceView surfaceView;
@@ -115,6 +114,13 @@ public class QRScanner extends Fragment {
     static boolean isChecked = false;
     static boolean canScreen = true;
     static boolean screenTouch = false;
+    static final int RESULT_LOAD_IMG = 110;
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+    }
 
     @Nullable
     @Override
@@ -122,6 +128,21 @@ public class QRScanner extends Fragment {
         view = inflater.inflate(R.layout.fragment_qrscanner, container, false);
         bitmap = null;
         intent = new Intent(getContext(), PicViewActivity.class);
+
+        view.findViewById(R.id.settingsButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ScannerSettingsActivity.class));
+            }
+        });
+
+        view.findViewById(R.id.imageButton2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ResultPicker.class));
+            }
+        });
+
         view.findViewById(R.id.takePic).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -190,6 +211,23 @@ public class QRScanner extends Fragment {
     public void onResume() {
         super.onResume();
         getActivity().setTitle("Сканер QR-кода");
+
+        SharedPreferences settings = getActivity().getSharedPreferences("Scanner", Context.MODE_PRIVATE);
+
+        firstColor = Integer.parseInt(
+                settings.getString(
+                        ScannerSettingsActivity.Const.getSETTINGS_FOR_ACTIVE_QR(),
+                        String.valueOf(Color.RED)
+                )
+        );
+
+        secondColor = Integer.parseInt(
+                settings.getString(
+                        ScannerSettingsActivity.Const.getSETTINGS_FOR_NOT_ACTIVE_QR(),
+                        String.valueOf(Color.BLUE)
+                )
+        );
+
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -265,7 +303,7 @@ public class QRScanner extends Fragment {
 
 
         cVHolder.setFormat(PixelFormat.TRANSPARENT);
-        paint.setColor(Color.BLUE);
+        paint.setColor(secondColor);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(23);
 
@@ -300,17 +338,14 @@ public class QRScanner extends Fragment {
                             for (int i = 0; i < qrCodes.size(); i++) {
 
                                 if (i == 0) {
-                                    paint.setColor(Color.RED);
-                                } else if (i == 1) paint.setColor(Color.BLUE);
+                                    paint.setColor(firstColor);
+                                } else if (i == 1) paint.setColor(secondColor);
                                 try {
-                                    /*if (qrCodes.valueAt(i).format != (Barcode.QR_CODE | Barcode.AZTEC | Barcode.DATA_MATRIX | Barcode.PDF417)) {
-                                        qrCodes.valueAt(i).cornerPoints[0].x -= 50;
-                                        qrCodes.valueAt(i).cornerPoints[2].y += 100;
-                                        qrCodes.valueAt(i).cornerPoints[3].x -= 50;
-                                        qrCodes.valueAt(i).cornerPoints[3].y += 100;
-                                    }*/
-
-                                    Draw(qrCodes.valueAt(i).cornerPoints, canvas, paint);
+                                    qrCodes.valueAt(i).cornerPoints[0].y *= h1;
+                                    qrCodes.valueAt(i).cornerPoints[1].y *= h1;
+                                    qrCodes.valueAt(i).cornerPoints[2].y *= h1;
+                                    qrCodes.valueAt(i).cornerPoints[3].y *= h1;
+                                    draw(qrCodes.valueAt(i).cornerPoints, canvas, paint);
                                 } catch (IndexOutOfBoundsException e) {
                                     Log.e("OutOfBounds", e.getMessage());
                                 }
@@ -318,7 +353,13 @@ public class QRScanner extends Fragment {
                             }
 
                             if (screenTouch) {
-                                takePicture(qrCodes.valueAt(0).cornerPoints, canvas.getHeight());
+                                new Thread() {
+                                    @Override
+                                    public void run() {
+                                        super.run();
+                                        takePicture(qrCodes.valueAt(0).cornerPoints);
+                                    }
+                                }.start();
                                 screenTouch = false;
                             }
                         }
@@ -350,19 +391,19 @@ public class QRScanner extends Fragment {
         });
     }
 
-    private static void Draw(Point[] points, Canvas canvas2, Paint paint) {
-        p1.setXY(points[0].x, points[0].y*h1);
+    public static void draw(Point[] points, Canvas canvas2, Paint paint) {
+        /*p1.setXY(points[0].x, points[0].y*h1);
         p2.setXY(points[1].x, points[1].y*h1);
         p3.setXY(points[2].x, points[2].y*h1);
-        p4.setXY(points[3].x, points[3].y*h1);
-        canvas2.drawLine(p1.x, p1.y, p2.x, p2.y, paint);
-        canvas2.drawLine(p2.x, p2.y, p3.x, p3.y, paint);
-        canvas2.drawLine(p3.x, p3.y, p4.x, p4.y, paint);
-        canvas2.drawLine(p4.x, p4.y, p1.x, p1.y, paint);
-        canvas2.drawPoint(p1.x, p1.y, paint);
-        canvas2.drawPoint(p2.x, p2.y, paint);
-        canvas2.drawPoint(p3.x, p3.y, paint);
-        canvas2.drawPoint(p4.x, p4.y, paint);
+        p4.setXY(points[3].x, points[3].y*h1);*/
+        canvas2.drawLine(points[0].x, points[0].y, points[1].x, points[1].y, paint);
+        canvas2.drawLine(points[1].x, points[1].y, points[2].x, points[2].y, paint);
+        canvas2.drawLine(points[2].x, points[2].y, points[3].x, points[3].y, paint);
+        canvas2.drawLine(points[3].x, points[3].y, points[0].x, points[0].y, paint);
+        canvas2.drawPoint(points[0].x, points[0].y, paint);
+        canvas2.drawPoint(points[1].x, points[1].y, paint);
+        canvas2.drawPoint(points[2].x, points[2].y, paint);
+        canvas2.drawPoint(points[3].x, points[3].y, paint);
     }
 
     public static Camera getCamera(CameraSource cameraSource) {
@@ -403,105 +444,106 @@ public class QRScanner extends Fragment {
 
     Bitmap bitmap;
     Intent intent;
-    private void takePicture(Point[] points, int height) {
-        cameraSource.takePicture(null, new CameraSource.PictureCallback() {
-            @Override
-            public void onPictureTaken(@NonNull byte[] bytes) {
-                new Handler().postDelayed(new Runnable() {
+    private void takePicture(Point[] points) {
+        cameraSource.takePicture(
+                null,
+                new CameraSource.PictureCallback() {
                     @Override
-                    public void run() {
-                        canScreen = true;
+                    public void onPictureTaken(@NonNull byte[] bytes) {
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                canScreen = true;
+                            }
+                        }, 1000);
+
+                        bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+
+                        //поворот на 90 градусов
+                        Matrix matrix = new Matrix();
+                        matrix.postRotate(90);
+
+                        bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+
+                        Log.e("saveImage", bitmap.getWidth() + " " + bitmap.getHeight());
+
+                        Paint paint1 = new Paint();
+                        paint1.setColor(secondColor);
+                        paint1.setStyle(Paint.Style.STROKE);
+                        paint1.setStrokeWidth(46);
+
+                        Canvas canvas1 = new Canvas(bitmap);
+
+                        double height1 = canvas1.getHeight()/(1.0*h);
+                        double width1 = canvas1.getWidth()/(1.0*w);
+
+                        points[0].x = (int)(points[0].x*width1)-100;
+                        points[1].x = (int)(points[1].x*width1)+100;
+                        points[2].x = (int)(points[2].x*width1)+100;
+                        points[3].x = (int)(points[3].x*width1)-100;
+
+                        points[0].y = (int)(points[0].y*height1/h1)-100;
+                        points[1].y = (int)(points[1].y*height1/h1)-100;
+                        points[2].y = (int)(points[2].y*height1/h1)+100;
+                        points[3].y = (int)(points[3].y*height1/h1)+100;
+
+
+
+                        try{
+                            bitmap = Bitmap.createBitmap(
+                                    bitmap,
+                                    Math.max(points[0].x, 0),
+                                    Math.max(points[0].y + 100, 0),
+                                    Math.max(points[1].x,points[2].x) < bitmap.getWidth()? Math.max(points[1].x,points[2].x) - Math.min(points[0].x, points[3].x) : bitmap.getWidth() - Math.max(points[0].x, 0),
+                                    Math.max(points[2].y,points[3].y) < bitmap.getHeight()? Math.max(points[2].y,points[3].y) + 100 - Math.min(points[0].y, points[1].y) : bitmap.getHeight() - Math.max(points[0].y, 0)
+                            );
+                        } catch (Exception e){
+                            draw(points,canvas1,paint1);
+                            Toast.makeText(getContext(),"QR-код выходит за рамки", Toast.LENGTH_LONG).show();
+                        }
+
+
+                        try {
+
+                            File file = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString()+"/intentPic");
+
+                            Log.e("saveImage:", Boolean.toString(file.mkdir()));
+
+                            /*{Log.e( "saveImage:", file.getAbsolutePath());
+                            Log.e( "saveImage:", Boolean.toString(file.isFile()));
+                            Log.e( "saveImage:", Boolean.toString(file.isDirectory()));
+                            }*/
+
+                            String s = "intentPic.png";
+                            file = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString()+"/intentPic"
+                                    ,s);
+
+                            Log.e("saveImage:", Boolean.toString(file.createNewFile()));
+
+                            /*{Log.e( "saveImage:", file.getAbsolutePath());
+                            Log.e( "saveImage:", Boolean.toString(file.isFile()));
+                            Log.e( "saveImage:", Boolean.toString(file.isDirectory()));
+                            Log.e( "saveImage:", file.canWrite()?"Yes":"No");
+                            Log.e("saveImage:" , "1");
+                            }*/
+
+                            OutputStream fOut = new FileOutputStream(file);
+                            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
+                            fOut.flush();
+                            fOut.close();
+
+                            intent.putExtra("nameOfPic",s);
+                            intent.putExtra("generated", 0);
+                            intent.putExtra("View?", false);
+                            startActivity(intent);
+
+                        } catch (Exception e) {
+                            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                            Log.e("saveImage:", "7 :" + e.getMessage());
+                        }
                     }
-                }, 1000);
-
-                bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-
-                //поворот на 90 градусов
-                Matrix matrix = new Matrix();
-                matrix.postRotate(90);
-
-                bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-
-                Log.e("saveImage", bitmap.getWidth() + " " + bitmap.getHeight());
-                Paint paint1 = new Paint();
-
-                paint1.setColor(Color.BLUE);
-                paint1.setStyle(Paint.Style.STROKE);
-                paint1.setStrokeWidth(46);
-
-                Canvas canvas1 = new Canvas(bitmap);
-
-                double height1 = bitmap.getHeight()/(1.0*h);
-                double width1 = bitmap.getWidth()/(1.0*w);
-
-                points[0].x = (int)(points[0].x*width1) - 100;
-                points[1].x = (int)(points[1].x*width1) + 100;
-                points[2].x = (int)(points[2].x*width1) + 100;
-                points[3].x = (int)(points[3].x*width1) - 100;
-
-                points[0].y = (int)(points[0].y*height1) - 100;
-                points[1].y = (int)(points[1].y*height1) - 100;
-                points[2].y = (int)(points[2].y*height1) + 100;
-                points[3].y = (int)(points[3].y*height1) + 100;
-                
-
-
-                try{
-                    bitmap = Bitmap.createBitmap(
-                            bitmap,
-                            Math.max(points[0].x, 0),
-                            Math.max(points[0].y + 100, 0),
-                            Math.max(points[1].x,points[2].x) < bitmap.getWidth()? Math.max(points[1].x,points[2].x) - Math.min(points[0].x, points[3].x) : bitmap.getWidth() - Math.max(points[0].x, 0),
-                            Math.max(points[2].y,points[3].y) < bitmap.getHeight()? Math.max(points[2].y,points[3].y) + 100 - Math.min(points[0].y, points[1].y) : bitmap.getHeight() - Math.max(points[0].y, 0)
-                    );
-                } catch (Exception e){
-                    Draw(points,canvas1,paint1);
-                    Toast.makeText(getContext(),"QR-код выходит за рамки", Toast.LENGTH_LONG).show();
                 }
-
-                
-                try {
-
-                    File file = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString()+"/intentPic");
-
-                    Log.e("saveImage:", Boolean.toString(file.mkdir()));
-
-                    {Log.e( "saveImage:", file.getAbsolutePath());
-                    Log.e( "saveImage:", Boolean.toString(file.isFile()));
-                    Log.e( "saveImage:", Boolean.toString(file.isDirectory()));
-                    }
-
-                    String s = "intentPic.png";
-                    file = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString()+"/intentPic"
-                            ,s);
-
-                    Log.e("saveImage:", Boolean.toString(file.createNewFile()));
-
-                    {Log.e( "saveImage:", file.getAbsolutePath());
-                    Log.e( "saveImage:", Boolean.toString(file.isFile()));
-                    Log.e( "saveImage:", Boolean.toString(file.isDirectory()));
-                    Log.e( "saveImage:", file.canWrite()?"Yes":"No");
-                    Log.e("saveImage:" , "1");
-                    }
-
-                    OutputStream fOut;
-                    fOut = new FileOutputStream(file);
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
-                    fOut.flush();
-                    fOut.close();
-
-                    intent.putExtra("nameOfPic",s);
-                    intent.putExtra("generated", 0);
-                    intent.putExtra("View?", false);
-                    startActivity(intent);
-
-                } catch (Exception e) {
-                    Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    Log.e("saveImage:", "7 :" + e.getMessage());
-                }
-
-            }
-        });
+        );
     }
 
 }

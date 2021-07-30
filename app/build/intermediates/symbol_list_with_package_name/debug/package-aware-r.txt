@@ -455,6 +455,7 @@ attr fontProviderFetchStrategy
 attr fontProviderFetchTimeout
 attr fontProviderPackage
 attr fontProviderQuery
+attr fontProviderSystemFontFamily
 attr fontStyle
 attr fontVariationSettings
 attr fontWeight
@@ -725,6 +726,7 @@ attr navigationIconTint
 attr navigationMode
 attr navigationViewStyle
 attr nestedScrollFlags
+attr nestedScrollViewStyle
 attr nestedScrollable
 attr nullable
 attr number
@@ -781,6 +783,7 @@ attr progressBarPadding
 attr progressBarStyle
 attr queryBackground
 attr queryHint
+attr queryPatterns
 attr radioButtonStyle
 attr radius_offset
 attr rangeFillColor
@@ -832,6 +835,7 @@ attr shapeAppearanceLargeComponent
 attr shapeAppearanceMediumComponent
 attr shapeAppearanceOverlay
 attr shapeAppearanceSmallComponent
+attr shortcutMatchRequired
 attr showAnimationBehavior
 attr showAsAction
 attr showDelay
@@ -1799,6 +1803,7 @@ drawable ic_baseline_photo_24
 drawable ic_baseline_photo_filter_24
 drawable ic_baseline_qr_code_24
 drawable ic_baseline_qr_code_scanner_24
+drawable ic_baseline_settings_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1856,6 +1861,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id HSLColorPicker
 id META
 id NO_DEBUG
 id SHIFT
@@ -1937,6 +1943,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backButton
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1971,7 +1978,10 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id collapseActionView
+id colorForActiveQR
+id colorForNotActiveQR
 id colorPicker
+id conButton
 id confirm_button
 id constraintLayout
 id constraintLayout2
@@ -2071,6 +2081,7 @@ id ignore
 id ignoreRequest
 id image
 id imageButton
+id imageButton2
 id imageView
 id imageView2
 id imageView3
@@ -2094,6 +2105,7 @@ id line1
 id line3
 id linear
 id listMode
+id listView
 id list_item
 id masked
 id material_clock_display
@@ -2181,6 +2193,8 @@ id pathRelative
 id peekHeight
 id percent
 id picInfo
+id picQR
+id pickedColor
 id pin
 id position
 id postLayout
@@ -2202,6 +2216,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id saveButton
 id save_button
 id save_non_transition_alpha
 id save_overlay_view
@@ -2229,6 +2244,10 @@ id select_dialog_listview
 id selected
 id selection_type
 id setButton
+id settingText1
+id settingText2
+id settings
+id settingsButton
 id shareButton
 id shortcut
 id showCustom
@@ -2254,6 +2273,7 @@ id src_over
 id standard
 id start
 id startHorizontal
+id startSettingsButton
 id startToEnd
 id startVertical
 id staticLayout
@@ -2268,10 +2288,15 @@ id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
 id tag_accessibility_pane_title
+id tag_on_apply_window_listener
+id tag_on_receive_content_listener
+id tag_on_receive_content_mime_types
 id tag_screen_reader_focusable
+id tag_state_description
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id tag_window_insets_animation_callback
 id takePic
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
@@ -2287,6 +2312,7 @@ id textTop
 id textView
 id textView2
 id textView3
+id textView4
 id textViewIcons
 id text_input_end_icon
 id text_input_error_icon
@@ -2394,6 +2420,8 @@ layout abc_tooltip
 layout activity_icon_picker
 layout activity_main
 layout activity_pic_view
+layout activity_result_picker
+layout activity_scanner_settings
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2410,6 +2438,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_color_picker
 layout fragment_qrcode_create
 layout fragment_qrscanner
 layout fragment_saved_pic
@@ -3388,6 +3417,7 @@ styleable BottomAppBar backgroundTint elevation fabAlignmentMode fabAnimationMod
 styleable BottomNavigationView backgroundTint elevation itemBackground itemHorizontalTranslationEnabled itemIconSize itemIconTint itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable BottomSheetBehavior_Layout android_elevation backgroundTint behavior_draggable behavior_expandedOffset behavior_fitToContents behavior_halfExpandedRatio behavior_hideable behavior_peekHeight behavior_saveFlags behavior_skipCollapsed gestureInsetBottomIgnored shapeAppearance shapeAppearanceOverlay
 styleable ButtonBarLayout allowStacking
+styleable Capability queryPatterns shortcutMatchRequired
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
@@ -3414,7 +3444,7 @@ styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavio
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing
-styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
+styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
 styleable Fragment android_name android_id android_tag

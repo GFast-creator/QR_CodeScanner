@@ -24,6 +24,8 @@
         android:roundIcon="@mipmap/ic_launcher_forsan_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".ScannerSettingsActivity"></activity>
+        <activity android:name=".ResultPicker" />
 
         <service
             android:name=".MyService"
@@ -41,7 +43,6 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/new_app_widget_info" />
         </receiver>
-
 
         <activity android:name=".PicViewActivity">
             <intent-filter>
@@ -62,7 +63,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter android:label="Создать QR-код">
                 <action android:name="android.intent.action.SEND" />

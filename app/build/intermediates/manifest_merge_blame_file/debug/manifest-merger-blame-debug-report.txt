@@ -6,7 +6,7 @@
 6    android:versionName="1.0" >
 7
 8    <uses-sdk
-9        android:minSdkVersion="21"
+9        android:minSdkVersion="22"
 9-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml
 10        android:targetSdkVersion="30" />
 10-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml
@@ -45,11 +45,11 @@
 25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 26
 27    <application
-27-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:20:5-87:19
+27-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:20:5-89:19
 28        android:allowBackup="true"
 28-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:21:9-35
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-29-->[androidx.core:core:1.3.1] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\8dbd859d1cd89239b42e7382b4fc40d7\core-1.3.1\AndroidManifest.xml:24:18-86
+29-->[androidx.core:core:1.7.0-alpha01] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\f026c0a447ca8d81d74b4ff41fdff0e1\core-1.7.0-alpha01\AndroidManifest.xml:24:18-86
 30        android:debuggable="true"
 31        android:icon="@mipmap/ic_launcher_forsan"
 31-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:22:9-50
@@ -59,136 +59,142 @@
 33-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:24:9-61
 34        android:supportsRtl="true"
 34-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:25:9-35
-35        android:testOnly="true"
-36        android:theme="@style/Theme.MyApplication" >
-36-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:26:9-51
-37        <service
-37-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:28:9-31:39
-38            android:name="com.example.qrcodescanner.MyService"
-38-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:29:13-38
-39            android:enabled="true"
-39-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:30:13-35
-40            android:exported="true" />
-40-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:31:13-36
-41
-42        <activity android:name="com.example.qrcodescanner.IconPicker" />
-42-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:33:9-48
-42-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:33:19-45
+35        android:theme="@style/Theme.MyApplication" >
+35-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:26:9-51
+36        <activity android:name="com.example.qrcodescanner.ScannerSettingsActivity" />
+36-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:27:9-70
+36-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:27:19-58
+37        <activity android:name="com.example.qrcodescanner.ResultPicker" />
+37-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:28:9-50
+37-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:28:19-47
+38
+39        <service
+39-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:30:9-33:39
+40            android:name="com.example.qrcodescanner.MyService"
+40-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:31:13-38
+41            android:enabled="true"
+41-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:32:13-35
+42            android:exported="true" />
+42-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:33:13-36
 43
-44        <receiver android:name="com.example.qrcodescanner.NewAppWidget" >
-44-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:35:9-43:20
-44-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:35:19-47
-45            <intent-filter>
-45-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:36:13-38:29
-46                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-46-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:37:17-84
-46-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:37:25-81
-47            </intent-filter>
-48
-49            <meta-data
-49-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:40:13-42:63
-50                android:name="android.appwidget.provider"
-50-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:41:17-58
-51                android:resource="@xml/new_app_widget_info" />
-51-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:42:17-60
-52        </receiver>
-53
-54        <activity android:name="com.example.qrcodescanner.PicViewActivity" >
-54-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:46:9-50:20
-54-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:46:19-50
-55            <intent-filter>
-55-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:47:13-49:29
-56                <action android:name="android.intent.action.MAIN" />
-56-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:48:17-69
-56-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:48:25-66
-57            </intent-filter>
-58        </activity>
-59
-60        <meta-data
-60-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:52:9-54:39
-61            android:name="com.google.android.gms.vision.DEPENDENCIES"
-61-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:53:13-70
-62            android:value="barcode" />
-62-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:54:13-36
-63
-64        <activity
-64-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:56:9-64:20
-65            android:name="com.example.qrcodescanner.StartActivityActivity"
-65-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:57:13-50
-66            android:theme="@style/Theme.AppCompat.DayNight" >
-66-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:58:13-60
-67            <intent-filter>
-67-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:59:13-63:29
-68                <action android:name="android.intent.action.MAIN" />
-68-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:48:17-69
-68-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:48:25-66
-69
-70                <category android:name="android.intent.category.LAUNCHER" />
-70-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:62:17-77
-70-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:62:27-74
-71            </intent-filter>
-72        </activity>
-73        <activity
-73-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:65:9-76:20
-74            android:name="com.example.qrcodescanner.MainActivity"
-74-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:65:19-47
-75            android:screenOrientation="portrait" >
-75-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:66:13-49
-76            <intent-filter android:label="Создать QR-код" >
-76-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:67:13-75:29
-76-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:67:28-58
-77                <action android:name="android.intent.action.SEND" />
-77-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:68:17-69
-77-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:68:25-66
-78
-79                <category android:name="android.intent.category.DEFAULT" />
-79-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:70:17-76
-79-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:70:27-73
+44        <activity android:name="com.example.qrcodescanner.IconPicker" />
+44-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:35:9-48
+44-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:35:19-45
+45
+46        <receiver android:name="com.example.qrcodescanner.NewAppWidget" >
+46-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:37:9-45:20
+46-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:37:19-47
+47            <intent-filter>
+47-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:38:13-40:29
+48                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+48-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:39:17-84
+48-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:39:25-81
+49            </intent-filter>
+50
+51            <meta-data
+51-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:42:13-44:63
+52                android:name="android.appwidget.provider"
+52-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:43:17-58
+53                android:resource="@xml/new_app_widget_info" />
+53-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:44:17-60
+54        </receiver>
+55
+56        <activity android:name="com.example.qrcodescanner.PicViewActivity" >
+56-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:47:9-51:20
+56-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:47:19-50
+57            <intent-filter>
+57-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:48:13-50:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:49:17-69
+58-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:49:25-66
+59            </intent-filter>
+60        </activity>
+61
+62        <meta-data
+62-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:53:9-55:39
+63            android:name="com.google.android.gms.vision.DEPENDENCIES"
+63-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:54:13-70
+64            android:value="barcode" />
+64-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:55:13-36
+65
+66        <activity
+66-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:57:9-65:20
+67            android:name="com.example.qrcodescanner.StartActivityActivity"
+67-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:58:13-50
+68            android:theme="@style/Theme.AppCompat.DayNight" >
+68-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:59:13-60
+69            <intent-filter>
+69-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:60:13-64:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:49:17-69
+70-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:49:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:63:17-77
+72-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:63:27-74
+73            </intent-filter>
+74        </activity>
+75        <activity
+75-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:66:9-78:20
+76            android:name="com.example.qrcodescanner.MainActivity"
+76-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:67:13-41
+77            android:screenOrientation="portrait" >
+77-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:68:13-49
+78            <intent-filter android:label="Создать QR-код" >
+78-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:69:13-77:29
+78-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:69:28-58
+79                <action android:name="android.intent.action.SEND" />
+79-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:70:17-69
+79-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:70:25-66
 80
-81                <data android:mimeType="text/plain" />
-81-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:72:17-55
-81-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:72:23-52
-82                <data android:mimeType="text/x-vcard" />
-82-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:72:17-55
-82-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:72:23-52
-83                <data android:mimeType="text/x-vcalendar" />
-83-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:72:17-55
-83-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:72:23-52
-84            </intent-filter>
-85        </activity>
-86
-87        <provider
-88            android:name="androidx.core.content.FileProvider"
-88-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:79:13-62
-89            android:authorities="com.example.myapplication.provider"
-89-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:80:13-60
-90            android:exported="false"
-90-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:81:13-37
-91            android:grantUriPermissions="true" >
-91-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:82:13-47
-92            <meta-data
-92-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:83:13-85:58
-93                android:name="android.support.FILE_PROVIDER_PATHS"
-93-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:84:17-67
-94                android:resource="@xml/provider_paths" />
-94-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:85:17-55
-95        </provider>
-96
-97        <activity
-97-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\469ecebb25b9d0d458bf4c501276eb60\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
-98            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-98-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\469ecebb25b9d0d458bf4c501276eb60\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
-99            android:exported="false"
-99-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\469ecebb25b9d0d458bf4c501276eb60\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
-100            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-100-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\469ecebb25b9d0d458bf4c501276eb60\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
-101
-102        <meta-data
-102-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\230bb264ea0fb9f2ceda78704f50f0c8\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
-103            android:name="com.google.android.gms.version"
-103-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\230bb264ea0fb9f2ceda78704f50f0c8\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
-104            android:value="@integer/google_play_services_version" />
-104-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\230bb264ea0fb9f2ceda78704f50f0c8\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
-105    </application>
-106
-107</manifest>
+81                <category android:name="android.intent.category.DEFAULT" />
+81-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:72:17-76
+81-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:72:27-73
+82
+83                <data android:mimeType="text/plain" />
+83-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:74:17-55
+83-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:74:23-52
+84                <data android:mimeType="text/x-vcard" />
+84-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:74:17-55
+84-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:74:23-52
+85                <data android:mimeType="text/x-vcalendar" />
+85-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:74:17-55
+85-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:74:23-52
+86            </intent-filter>
+87        </activity>
+88
+89        <provider
+90            android:name="androidx.core.content.FileProvider"
+90-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:81:13-62
+91            android:authorities="com.example.myapplication.provider"
+91-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:82:13-60
+92            android:exported="false"
+92-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:83:13-37
+93            android:grantUriPermissions="true" >
+93-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:84:13-47
+94            <meta-data
+94-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:85:13-87:58
+95                android:name="android.support.FILE_PROVIDER_PATHS"
+95-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:86:17-67
+96                android:resource="@xml/provider_paths" />
+96-->C:\#Project\MyApplication9_16\app\src\main\AndroidManifest.xml:87:17-55
+97        </provider>
+98
+99        <activity
+99-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\153b07ade3bae4d71d45da258e9bb228\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
+100            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+100-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\153b07ade3bae4d71d45da258e9bb228\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
+101            android:exported="false"
+101-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\153b07ade3bae4d71d45da258e9bb228\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
+102            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+102-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\153b07ade3bae4d71d45da258e9bb228\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
+103
+104        <meta-data
+104-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\f10110ddf51fafe67d1e9811c974c49d\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
+105            android:name="com.google.android.gms.version"
+105-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\f10110ddf51fafe67d1e9811c974c49d\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
+106            android:value="@integer/google_play_services_version" />
+106-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\rusla\.gradle\caches\transforms-2\files-2.1\f10110ddf51fafe67d1e9811c974c49d\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
+107    </application>
+108
+109</manifest>
